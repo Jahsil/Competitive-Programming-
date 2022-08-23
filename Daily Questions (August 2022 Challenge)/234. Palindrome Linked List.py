@@ -16,3 +16,27 @@ class Solution:
         else:
             return False
         
+        
+        
+        # Using Two Pointers
+        
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        start = head
+        s = ""
+        while start:
+            s += str(start.val)
+            start = start.next
+        
+        left , right = 0 , len(s) - 1   
+        
+        while(left < right):
+            if (s[left] != s[right]):
+                return False
+            right -= 1
+            left += 1
+            
+        return True
+            
+            
+            
