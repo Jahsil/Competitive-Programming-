@@ -30,4 +30,5 @@ class Solution:
             return arr
             
         dfs(root)
+        
         return "".join(arr)
