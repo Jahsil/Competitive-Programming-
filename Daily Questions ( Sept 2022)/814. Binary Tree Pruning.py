@@ -1,6 +1,6 @@
 def traversal(node):
-            if not node.left and not node.right and node.val == 0: return False
-            if not node.left and not node.right and node.val == 1: return True
+            #if not node.left and not node.right and node.val == 0: return False
+            #if not node.left and not node.right and node.val == 1: return True
 
             if node.left:
                 if not traversal(node.left):
