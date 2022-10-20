@@ -50,5 +50,21 @@ class Solution:
                 i += 1
         return result
             
+        
+# Slower but clean short code
+
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        romans = {'I' : 1, 'V' : 5, 'X' : 10, 'L' : 50, 'C': 100, 'D': 500, 'M': 1000}
+        number = 0
+        
+        for index in range(len(s) - 1):
+            if romans[s[index+1]] > romans[s[index]]:
+                number -= romans[s[index]]
+            else:
+                number += romans[s[index]]
+            print(number)
+        number += romans[s[len(s)-1]]
+        return number
             
        
