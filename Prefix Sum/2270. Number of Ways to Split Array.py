@@ -20,4 +20,24 @@ class Solution:
                 nubmerOfSplits += 1
                 
         return nubmerOfSplits
+    
+    
+    
+# Better space complexity O(1)
+class Solution:
+    def waysToSplitArray(self, nums: List[int]) -> int:
+        N = len(nums)
+        nubmerOfSplits = 0
+        
+        total = sum(nums)
+        left = 0
+        
+        for i in range(N-1):
+            left += nums[i]
+            right = total - left
+            
+            if left >= right:
+                nubmerOfSplits += 1
+                
+        return nubmerOfSplits
             
